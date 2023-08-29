@@ -1,0 +1,38 @@
+
+/* Group selectors. Here we aply the same rule to several selectors */
+h1, h2 {
+    color: blueviolet;
+}
+
+/* Child. Here we are targeting the p element which is a direct child of 
+   the box class */
+.box > p {
+    color: firebrick;
+}
+
+/* Descendant. Here we are targeting all the li items inside 
+   box class. The idea is that this rule does not affect other 
+    potential li elements that could be placed outside the box class div
+
+
+*/
+.box li {
+    color: blue;
+}
+
+/* Chaining. This way we can select li items with "done" as a class 
+   without interfering with the other li element.
+   It can be seen as if we were doing an inline styling
+   */
+li.done {
+    color: seagreen;
+}
+
+/* Combining Combiners. 
+Here we are combining Descendant and Chaining to select 
+a certain html element
+*/
+
+ul p.done {
+    font-size: 0.5rem;
+}
